@@ -47,7 +47,7 @@ function windowResized() {
 function draw() {
     console.log("🚀 - Drawing canvas - P5 is running");
     // CLEAR BACKGROUND
-    background(5d);
+    background(5);
     //image(bg,windowWidth/2,windowHeight/2)
     orbitControl(1, 1);
 
