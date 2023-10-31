@@ -1,92 +1,94 @@
-[
-    {
-        "arc": 0,
-        "distance": 0,
-        "radius": 360,
-        "orbitSpeed": 0,
-        "satelits": [],
-        "name": "Soleil",
-        "v": { "x": 0.5, "y": 0, "z": 0 },
-        "img": "../data/sun1.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 772,
-        "radius": 9.6,
-        "orbitSpeed": 0.0072,
-        "satelits": [],
-        "name": "Mercure",
-        "v": { "x": 772, "y": 308.8, "z": 0 },
-        "img": "../data/planet6.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 908,
-        "radius": 24,
-        "orbitSpeed": 0.006,
-        "satelits": [],
-        "name": "Venus",
-        "v": { "x": 908, "y": 363.20000000000005, "z": 0 },
-        "img": "../data/planet5.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 1020,
-        "radius": 25.2,
-        "orbitSpeed": 0.004,
-        "satelits": [],
-        "name": "Terre",
-        "v": { "x": 1020, "y": 408, "z": 0 },
-        "img": "../data/planet1.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 1230.4,
-        "radius": 15.6,
-        "orbitSpeed": 0.0007199999999999999,
-        "satelits": [],
-        "name": "Mars",
-        "v": { "x": 1230.4, "y": 492.1600000000001, "z": 0 },
-        "img": "../data/mars.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 2701.2,
-        "radius": 285.6,
-        "orbitSpeed": 0.00016,
-        "satelits": [],
-        "name": "Jupiter",
-        "v": { "x": 2701.2, "y": 1080.48, "z": 0 },
-        "img": "../data/planet7.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 4434.8,
-        "radius": 240.8,
-        "orbitSpeed": 0.000116,
-        "satelits": [],
-        "name": "Saturne",
-        "v": { "x": 4434.8, "y": 1773.92, "z": 0 },
-        "img": "../data/saturn.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 8296.4,
-        "radius": 100,
-        "orbitSpeed": 0.00033600000000000004,
-        "satelits": [],
-        "name": "Uranus",
-        "v": { "x": 8296.4, "y": 3318.56, "z": 0 },
-        "img": "../data/uranus.jpg"
-    },
-    {
-        "arc": 0.4,
-        "distance": 12620,
-        "radius": 98.8,
-        "orbitSpeed": 0.00016800000000000002,
-        "satelits": [],
-        "name": "Neptune",
-        "v": { "x": 12620, "y": 5048, "z": 0 },
-        "img":"../data/neptune.jpg"
-    }
-]
+{
+    "planets": [
+        {
+            "arc": 0,
+            "distance": 0,
+            "radius": 360,
+            "orbitSpeed": 0,
+            "satelits": [],
+            "name": "Soleil",
+            "v": { "x": 0.5, "y": 0, "z": 0 },
+            "img": "../data/sun1.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 772,
+            "radius": 9.6,
+            "orbitSpeed": 0.0072,
+            "satelits": [],
+            "name": "Mercure",
+            "v": { "x": 772, "y": 308.8, "z": 0 },
+            "img": "../data/planet6.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 908,
+            "radius": 24,
+            "orbitSpeed": 0.006,
+            "satelits": [],
+            "name": "Venus",
+            "v": { "x": 908, "y": 363.20000000000005, "z": 0 },
+            "img": "../data/planet5.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 1020,
+            "radius": 25.2,
+            "orbitSpeed": 0.004,
+            "satelits": [],
+            "name": "Terre",
+            "v": { "x": 1020, "y": 408, "z": 0 },
+            "img": "../data/planet1.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 1230.4,
+            "radius": 15.6,
+            "orbitSpeed": 0.0007199999999999999,
+            "satelits": [],
+            "name": "Mars",
+            "v": { "x": 1230.4, "y": 492.1600000000001, "z": 0 },
+            "img": "../data/mars.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 2701.2,
+            "radius": 285.6,
+            "orbitSpeed": 0.00016,
+            "satelits": [],
+            "name": "Jupiter",
+            "v": { "x": 2701.2, "y": 1080.48, "z": 0 },
+            "img": "../data/planet7.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 4434.8,
+            "radius": 240.8,
+            "orbitSpeed": 0.000116,
+            "satelits": [],
+            "name": "Saturne",
+            "v": { "x": 4434.8, "y": 1773.92, "z": 0 },
+            "img": "../data/saturn.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 8296.4,
+            "radius": 100,
+            "orbitSpeed": 0.00033600000000000004,
+            "satelits": [],
+            "name": "Uranus",
+            "v": { "x": 8296.4, "y": 3318.56, "z": 0 },
+            "img": "../data/uranus.jpg"
+        },
+        {
+            "arc": 0.4,
+            "distance": 12620,
+            "radius": 98.8,
+            "orbitSpeed": 0.00016800000000000002,
+            "satelits": [],
+            "name": "Neptune",
+            "v": { "x": 12620, "y": 5048, "z": 0 },
+            "img": "../data/neptune.jpg"
+        }
+    ]
+}

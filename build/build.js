@@ -43,23 +43,22 @@ var y = 0;
 var z = 0;
 var cam;
 function preload() {
-    var _this = this;
     console.log("🚀 - Preload initialized - P5 is running");
-    bg = loadImage("../data/background.jpg", function () { }, console.error);
-    fetch("../data/planets.json")
-        .then(function (response) { return response.json(); })
-        .then(function (json) {
-        jsonData = json;
-        for (var i = 0; i < jsonData.length; i++) {
-            astersImages.push(loadImage(_this.jsonData[i].img, function () { }, console.error));
+    jsonData = loadJSON("../data/planets.json", {}, "json", function (json) {
+        var planets = jsonData.planets;
+        for (var i = 0; i < planets.length; i++) {
+            astersImages.push(loadImage(planets[i].img, function () { }, console.error));
         }
+    }, function (error) {
+        console.error("Impossible to load data ! ", error);
     });
 }
 function setup() {
     console.log("🚀 - Setup initialized - P5 is running");
+    var planets = jsonData.planets;
     createCanvas(windowWidth, windowHeight, WEBGL);
-    for (var i = 0; i < jsonData.length; i++) {
-        var aster = jsonData[i];
+    for (var i = 0; i < planets.length; i++) {
+        var aster = planets[i];
         asters.push(new Celestial(aster.name, aster.arc, aster.distance, aster.radius, aster.orbitSpeed, astersImages[i]));
     }
     translate(750, 750, -5000).frameRate(60);
