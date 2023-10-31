@@ -7,6 +7,10 @@ let astersImages: p5.Image[] = [];
 let asters: Celestial[] = [];
 let detailX;
 
+let x :number = 0;
+let y :number = 0;
+let z :number = 0;
+
 let cam: p5.Camera;
 function preload() {
   console.log("🚀 - Preload initialized - P5 is running");
@@ -30,7 +34,7 @@ function setup() {
             new Celestial(aster.name, aster.arc, aster.distance, aster.radius, aster.orbitSpeed, astersImages[i])
         );
     }
-    frameRate(60);
+    translate(750,750,-5000).frameRate(60);
 }
 
 // p5 WILL AUTO RUN THIS FUNCTION IF THE BROWSER WINDOW SIZE CHANGES
@@ -43,8 +47,24 @@ function windowResized() {
 function draw() {
     console.log("🚀 - Drawing canvas - P5 is running");
     // CLEAR BACKGROUND
-    background(10);
+    background(5d);
+    //image(bg,windowWidth/2,windowHeight/2)
     orbitControl(1, 1);
+
+    if(keyIsDown(UP_ARROW)){
+      y+= 10
+    }
+    if(keyIsDown(DOWN_ARROW)){
+      y-= 10
+    }
+    if(keyIsDown(LEFT_ARROW)){
+      x-= 10
+    }
+    if(keyIsDown(RIGHT_ARROW)){
+      x+= 10
+    }
+    translate(x,y,z);
+    //pointLight(255, 255, 255, mouseX, mouseY, 150);
     // CENTER OF SCREEN
     for (const aster of asters) {
         aster.show();

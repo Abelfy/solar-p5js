@@ -2,7 +2,7 @@
     {
         "arc": 0,
         "distance": 0,
-        "radius": 124,
+        "radius": 360,
         "orbitSpeed": 0,
         "satelits": [],
         "name": "Soleil",

@@ -8,7 +8,7 @@ var Celestial = (function () {
         this.name = name;
         this.v = new p5.Vector();
         this.v.set(1, a / Celestial.MAGIC_COEFFICIENT, 0);
-        this.distance = d / Celestial.MAGIC_COEFFICIENT;
+        this.distance = d;
         this.radius = r / Celestial.MAGIC_COEFFICIENT;
         this.v.mult(this.distance === 0 ? 0.5 : this.distance);
         this.arc = a / Celestial.MAGIC_COEFFICIENT;
@@ -38,6 +38,9 @@ var jsonData;
 var astersImages = [];
 var asters = [];
 var detailX;
+var x = 0;
+var y = 0;
+var z = 0;
 var cam;
 function preload() {
     var _this = this;
@@ -59,7 +62,7 @@ function setup() {
         var aster = jsonData[i];
         asters.push(new Celestial(aster.name, aster.arc, aster.distance, aster.radius, aster.orbitSpeed, astersImages[i]));
     }
-    frameRate(60);
+    translate(750, 750, -5000).frameRate(60);
 }
 function windowResized() {
     console.log("🚀 - Resizing canvas - P5 is running");
@@ -67,8 +70,21 @@ function windowResized() {
 }
 function draw() {
     console.log("🚀 - Drawing canvas - P5 is running");
-    background(10);
+    background(5);
     orbitControl(1, 1);
+    if (keyIsDown(UP_ARROW)) {
+        y += 10;
+    }
+    if (keyIsDown(DOWN_ARROW)) {
+        y -= 10;
+    }
+    if (keyIsDown(LEFT_ARROW)) {
+        x -= 10;
+    }
+    if (keyIsDown(RIGHT_ARROW)) {
+        x += 10;
+    }
+    translate(x, y, z);
     for (var _i = 0, asters_1 = asters; _i < asters_1.length; _i++) {
         var aster = asters_1[_i];
         aster.show();

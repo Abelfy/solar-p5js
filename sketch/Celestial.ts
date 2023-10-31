@@ -13,7 +13,7 @@ class Celestial {
         this.name = name;
         this.v = new p5.Vector();
         this.v.set(1, a / Celestial.MAGIC_COEFFICIENT, 0);
-        this.distance = d / Celestial.MAGIC_COEFFICIENT;
+        this.distance = d ;
         this.radius = r / Celestial.MAGIC_COEFFICIENT;
         this.v.mult(this.distance === 0 ? 0.5 : this.distance);
         this.arc = a / Celestial.MAGIC_COEFFICIENT;
